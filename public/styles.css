@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #232342, #10101a 50%);
+}
+
+.app {
+  width: min(92vw, 680px);
+}
+
+.card {
+  background: rgba(22, 22, 35, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.hidden {
+  display: none;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+p {
+  color: #d6d6e1;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  border-radius: 10px;
+  border: 1px solid #5a5a77;
+  background: #111122;
+  color: #f4f6ff;
+  padding: 0.75rem;
+}
+
+button {
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #17172b;
+  background: linear-gradient(90deg, #6f8bff, #7bf9ef);
+}
+
+.counter-box {
+  margin: 1.5rem 0;
+  background: #0f0f1e;
+  border: 1px solid #32325d;
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.counter-title {
+  color: #a8b2ff;
+}
+
+.counter-value {
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
+  font-weight: 900;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #c8c8dc;
+  margin-bottom: 1.2rem;
+}
+
+.error {
+  min-height: 1.2rem;
+  color: #ff8fa8;
+}
