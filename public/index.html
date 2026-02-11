@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de "Spoiler"</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section id="form-view" class="card">
+        <h1>Contador de “Spoiler” en YouTube</h1>
+        <p>
+          Pega una URL de YouTube y te mostraremos en tiempo real cuántas veces se menciona
+          <strong>"Spoiler"</strong> según la transcripción.
+        </p>
+
+        <form id="video-form">
+          <label for="video-url">URL del video</label>
+          <input
+            type="url"
+            id="video-url"
+            name="video-url"
+            placeholder="https://www.youtube.com/watch?v=..."
+            required
+          />
+          <button type="submit">Iniciar contador</button>
+        </form>
+        <p id="form-error" class="error" role="alert"></p>
+      </section>
+
+      <section id="counter-view" class="card hidden">
+        <h2>Seguimiento en tiempo real</h2>
+        <p id="video-label"></p>
+
+        <div class="counter-box">
+          <span class="counter-title">“Spoiler” detectados</span>
+          <span id="counter-value" class="counter-value">0</span>
+        </div>
+
+        <div class="status-row">
+          <span id="clock">Tiempo: 00:00</span>
+          <span id="match-status">Esperando coincidencias...</span>
+        </div>
+
+        <button id="back-button" type="button">Usar otro video</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
